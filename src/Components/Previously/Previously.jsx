@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
-import { PreviouslyWatched } from '../../Map/Map'
+import { Films } from '../../Map/Map'
 import styles from './Previously.module.css'
 import { Grow, Rating } from '@mui/material'
 
@@ -10,15 +10,23 @@ const Previously = () => {
       setSelectedItem(item);
     };
   
+    const film = Films.filter((obj) => obj.previously === "1")
+
     const closePopup = () => {
       setSelectedItem(null);
     };
+
+    const handleReadMore = (event, id) => {
+      event.preventDefault();
+      window.location.href = `/detail/${id}`;
+    };
+
   return (
     <div className={styles.PreviouslyBox} style={{backgroundColor:"#005fcd", padding:"3rem 0 5rem 0", marginTop:"5rem"}}>
     <h1 className={styles.Header}>Previously Watched</h1>
         <div className={styles.PreviouslyBoxInside} style={{background:"#248aff", paddingBottom:"1.9rem"}}>
             <Container style={{display: "grid", gridTemplateColumns:"1fr 1fr 1fr", marginLeft:"3rem"}}>
-                {PreviouslyWatched.map((films) => (
+                {film.map((films) => (
                     <div className={styles.Film}>
                         <img src={films.Image} onClick={() => openPopUp(films)}/>
                         <div className={styles.Content} onClick={() => openPopUp(films)}>
@@ -34,7 +42,7 @@ const Previously = () => {
           <Grow in={true}>
             <div
               className={styles.popup}
-              style={{ backgroundImage: `url(${selectedItem.Image})`, backgroundRepeat: "no-repeat",
+              style={{ backgroundImage: `url(${selectedItem.Banner})`, backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center"}}
             >
@@ -47,7 +55,16 @@ const Previously = () => {
                   {selectedItem.Title}
                   ({selectedItem.Year})
                 </h1>
-                <p>{selectedItem.Description}</p>
+                <p>
+                  {selectedItem.Description}
+                  <a
+                    href=""
+                    className={styles.ReadMore}
+                    onClick={(e) => handleReadMore(e, selectedItem.id)}
+                  >
+                    Read More
+                  </a>
+                </p>
                 <Rating name="read-only" value={selectedItem.Rating} readOnly size="large"/>
                 <a href="" className={styles.WatchBtn}>Watch</a>
               </div>

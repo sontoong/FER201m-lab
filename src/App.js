@@ -1,32 +1,19 @@
-import React, { useState } from 'react'
-import Header from './Components/Header/Header'
-import Footer from './Components/Footer/Footer'
-import FilmPresentation from './Components/FilmPresentation/FilmPresentation'
-import styles from "./App.module.css"
-import Previously from './Components/Previously/Previously'
-import Carousel from './Components/Banner/Banner'
-import { Images } from './Map/Map'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homepage from './Components/HomePage/Homepage';
+import Detail from './Components/Detail/Detail';
+import Contact from './Components/Contact/Contact';
+
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const handleDarkModeToggle = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   return (
-    <div
-      style={{
-        backgroundColor: isDarkMode ? '#494949' : 'white',
-        transition: 'background-color 0.3s ease',
-        minHeight: '100vh',
-      }}
-    >
-      <Header isDarkMode={isDarkMode} handleDarkModeToggle={handleDarkModeToggle} />
-      <Carousel Images={Images}/>
-      <Previously/>
-      <FilmPresentation isDarkMode={isDarkMode}/>
-      <Footer/>
+    <div>
+        <Routes>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/detail/:id' element={<Detail/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+        </Routes>
     </div>
   );
 };

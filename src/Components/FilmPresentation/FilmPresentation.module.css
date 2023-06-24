@@ -56,6 +56,10 @@
     margin-top: 5rem;
 }
 
+.ReadMore{
+    color: #dd2c2c;
+}
+
 .popup {
     position: fixed;
     top: 5%;
@@ -132,7 +136,7 @@
     color: white;
     margin-top: .5rem;
     overflow: hidden;
-    background-color: rgba(60, 128, 205, 0.792);
+    background-color: rgb(60, 128, 205);
     bottom: 0;
     border-radius: 0 0 2rem 2rem;
     padding: 2rem;

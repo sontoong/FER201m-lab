@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import styles from './Header.module.css';
 import { Container } from 'react-bootstrap';
 import { alpha, styled } from '@mui/material/styles';
-import { pink } from '@mui/material/colors';
+import { red } from '@mui/material/colors';
 import Switch from '@mui/material/Switch';
 import { Brightness7, ModeNight } from '@mui/icons-material';
 
 const Header = ({ isDarkMode, handleDarkModeToggle }) => {
   const PinkSwitch = styled(Switch)(({ theme }) => ({
     '& .MuiSwitch-switchBase.Mui-checked': {
-      color: pink[600],
+      color: red[400],
       '&:hover': {
-        backgroundColor: alpha(pink[600], theme.palette.action.hoverOpacity),
+        backgroundColor: alpha(red[400], theme.palette.action.hoverOpacity),
       },
     },
     '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-      backgroundColor: pink[600],
+      backgroundColor: red[400],
     },
   }));
 
@@ -26,7 +26,7 @@ const Header = ({ isDarkMode, handleDarkModeToggle }) => {
   return (
     <Container className={styles.container}>
       <div className={styles.UpperContainer}>
-        <img src="asset/img/Logo.png" alt="Logo" />
+      <a href="/"><img src="../../asset/img/Logo.png" alt="Logo" /></a>
         <div
           style={{
             fontWeight: 'bold',
@@ -60,6 +60,9 @@ const Header = ({ isDarkMode, handleDarkModeToggle }) => {
         </a>
         <a href="#" className={styles.Category}>
           TV-Show
+        </a>
+        <a href="/contact" className={styles.Category}>
+          Contact
         </a>
       </div>
     </Container>

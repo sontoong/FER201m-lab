@@ -38,6 +38,10 @@
 }
 
 .UpperContainer img{
+    width: 100%;
+}
+
+.UpperContainer a{
     width: 8%;
 }
 

@@ -7,7 +7,7 @@ const Footer = () => {
     <Container className={styles.container}>
         <div className={styles.Copyright}>
             <p>Copyright 2023© FilmFreak</p>
-            <img src='asset/img/Logo.png'/>
+            <img src="../../asset/img/Logo.png" alt="Logo" />
         </div>
         <div className={styles.Category}>
         <a href="#">Action</a>

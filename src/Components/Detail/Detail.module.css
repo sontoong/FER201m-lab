@@ -1,0 +1,58 @@
+.Header{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-family: Righteous;
+    margin-top: 5rem;
+}
+
+.Content{
+    font-family: Righteous;
+    font-weight: light;
+    color: white;
+    margin: 0 auto;
+}
+
+body{
+    margin: 0;
+}
+
+.Images{
+    justify-self: center;
+    width: 94%;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.ContentBox{
+    background-color: rgb(0, 95, 205);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.DarkContentBox{
+    background-color: rgba(0, 96, 205, 0.244);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.WatchBtn{
+    font-family: Righteous;
+    text-decoration: none;
+    color:rgb(60, 128, 205);
+    background-color: #dd2c2c;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-left: 73rem;
+    border-radius: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+  .WatchBtn:hover{
+    background-color: rgb(0, 71, 152);
+    color: white;
+  }
