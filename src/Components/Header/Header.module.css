@@ -1,0 +1,72 @@
+.UpperContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 95, 205);
+    padding: .5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-family: Righteous;
+}
+
+.UpperContainer form input{
+    padding: 1rem;
+    width: 15rem;
+    height: 3rem;
+    border-radius: 2rem 0 0 2rem;
+    font-weight: bold;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px inset;
+}
+
+.UpperContainer form button{
+    padding: 2rem;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0 2rem 2rem 0;
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+    background-color: white;
+    background-color: #dd2c2c;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+.UpperContainer form button:hover{
+    background-color: rgb(0, 71, 152);
+    color: white;
+}
+
+.UpperContainer img{
+    width: 8%;
+}
+
+.LowerContainer{
+    display: flex;
+    justify-content: flex-start;
+    height: 114.400px;
+    padding-left: 2rem;
+}
+
+.Category{
+    background-color: rgb(0, 74, 158);
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem 1rem 2rem;
+    font-weight: bold;
+    border-radius: 0 0 2rem 2rem;
+    transition: all .2s;
+    height: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-family: Righteous;
+}
+
+.Category:hover{
+    filter: brightness(150%);
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    height: 50px;
+    background-color: #dd2c2c;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 25px 20px -20px,rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.7) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
