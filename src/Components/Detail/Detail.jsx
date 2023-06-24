@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Rating } from "@mui/material";
 import { Container } from "react-bootstrap";
+import ReactPlayer from "react-player";
 
 const Detail = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -35,18 +36,26 @@ const Detail = () => {
       <div className={isDarkMode ? styles.DarkContentBox : styles.ContentBox} style={{margin: "0 auto", width: "90%"}}>
           <h1 className={styles.Header}>{film.Title}</h1>
           <p className={styles.Content}>{film.FullDescription}</p>
-          <Rating
-                  name="read-only"
-                  value={film.Rating}
-                  readOnly
-                  size="large"
-                  style={{marginLeft:"74rem", marginTop:"3rem"}}
-            />
-        <div style={{marginTop:"3rem"}}>
-            <a href="" className={styles.WatchBtn}>
-                      Watch
-            </a>
-        </div>
+          <div style={{display:"flex", justifyContent:"space-between"}}>
+              <div style={{width:"60%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                  <h1 className={styles.Header}>Trailer</h1>
+                  <ReactPlayer url={film.trailer} width="70%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscopre; picture-in-picture" allowfullscreen></ReactPlayer>
+              </div>
+              <div style={{width:"30%"}}>
+                  <Rating
+                          name="read-only"
+                          value={film.Rating}
+                          readOnly
+                          size="large"
+                          style={{marginLeft: "12rem", marginTop:"3rem"}}
+                    />
+                          <div style={{marginTop:"3rem"}}>
+                    <a href="" className={styles.WatchBtn}>
+                              Watch
+                    </a>
+                          </div>
+              </div>
+          </div>
       </div>
       <Footer/>
     </Container>

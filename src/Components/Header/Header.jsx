@@ -64,6 +64,9 @@ const Header = ({ isDarkMode, handleDarkModeToggle }) => {
         <a href="/contact" className={styles.Category}>
           Contact
         </a>
+        <a href="/about" className={styles.Category}>
+          About
+        </a>
       </div>
     </Container>
   );
